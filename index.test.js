@@ -149,10 +149,10 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "dustbin") {
-
+            // 2,6 
         }
         if (currentQuestion == "glass") {
-
+            // colourful word search
         }
         if (currentQuestion == "crack") {
 
