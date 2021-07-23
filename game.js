@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
                 window.alert("You have successfully exited the room congrats!")
-                window.location.href = 'home.html'
+                window.location.href = 'index.html'
             } else {
                 return window.alert("Oops, wrong password! Try again!")
             }
@@ -201,7 +201,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let lowerCapAnswer = userAnswer.toLowerCase()
             console.log(typeof lowerCapAnswer);
             if (lowerCapAnswer == answer) {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -213,7 +214,8 @@ window.addEventListener('DOMContentLoaded', () => {
             // let answer = 'sqarr'
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -223,7 +225,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
                 updateClues(currentQuestion)
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -232,7 +235,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let answer = 'slice';
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -241,7 +245,8 @@ window.addEventListener('DOMContentLoaded', () => {
             // let answer = 'i+=3';
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'i+=3' || userAnswer == 'i += 3' || userAnswer == 'i + = 3') {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -250,7 +255,8 @@ window.addEventListener('DOMContentLoaded', () => {
             // let answer = "c" || "C"
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'C' || userAnswer == 'c') {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -262,7 +268,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let answer = 4;
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
