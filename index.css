@@ -10,7 +10,6 @@ body {
 #canvas-div {
     display: flex;
     justify-content: center;
-    /* background-color: gray; */
 }
 
 canvas {
@@ -60,10 +59,10 @@ header {
 
 #content-in-modal {
     margin: 0 auto;
-    padding: 20px; 
+    padding: 20px;
 }
 
-.modal-content-2{
+.modal-content-2 {
     display: flex;
     flex-direction: column;
 }
@@ -74,28 +73,44 @@ header {
     font-style: normal;
 }
 
-#labelForQuestionInput{
+#labelForQuestionInput {
     font-size: 1.7em;
 }
-#questionImg{
+
+#questionImg {
     width: 600px;
     height: auto;
     margin-bottom: 30px;
 }
-#questionInput{
+
+#questionInput {
     padding: 5px;
     margin: 10px 0px 10px 0px;
     width: 100px;
-    
 }
-#answerQuestion{
-    font-size: 1.3em;
-    width: 80px;
+
+#answerQuestion {
+    /* font-size: 1.3em; */
+    width: 90px;
+    height: 40px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
 }
-#close-Modal{
+
+#close-Modal {
     padding: 10px;
     font-size: 1em;
     width: max-content;
-    margin: 0 auto;
+    margin: auto;
+    padding-left: 2em;
+    padding-right: 2em;
     margin-bottom: 50px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    color: white;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
 }
