@@ -14,6 +14,19 @@ body {
     margin-left: 5em;
 }
 
+#intro {
+    margin-left: 8em;
+    margin-top: 1em;
+    font-size: 20px;
+    font-family: myriad-pro, sans-serif;
+}
+
+#jsedition {
+    margin-left: 11.5em;
+    font-size: 14px;
+    font-family: myriad-pro, sans-serif;
+}
+
 #tab {
     margin-left: 1em;
     position: absolute;
@@ -25,12 +38,10 @@ body {
     width: 15px;
     height: 50px;
     background-color: #9B0505;
-    /* margin-left: 65em; */
     margin-top: 0.5em;
     position: absolute;
     right: 9em;
     text-align: right;
-
 }
 
 #rectangle-pic {
@@ -46,27 +57,29 @@ body {
     margin-left: 3em;
 }
 
-#game-name {
-    margin-left: 9em;
-    margin-top: 2em;
-    font-size: 18px;
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-}
-
 #content {
     display: flex;
     flex-direction: row;
     margin-top: 5em;
 }
 
-#start-button {
+#intro-text {
+    padding-left: 5em;
+    padding-right: 5em;
+    font-family: myriad-pro, sans-serif;
+    font-size: 17px;
+}
+
+#next-button {
     background-color: #9B0505;
     border-radius: 20px;
-    margin-left: 12em;
+    /* margin-left: 12em; */
     height: 40px;
     width: 90px;
     font-family: myriad-pro, sans-serif;
     font-style: normal;
     color: white;
+    position: absolute;
+    right: 10em;
+    /* text-align: right; */
 }
