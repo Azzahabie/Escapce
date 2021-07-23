@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "keypad") {
             questionImg.src = ""
 
-            labelForQuestion.textContent = "Enter the password to exit: "
+            labelForQuestion.textContent = "Given parts of the for loop: 1) var sum = ' '; 2) sum += 3) Enter the password to exit: "
             questionInput.type = "number"
             questionInput.value = ""
         }
@@ -131,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (data == "window") {
             questionImg.src = "./crosswordPuzzle.png"
-            labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes (No Caps)"
+            labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes."
             questionInput.type = "text"
             questionInput.value = ""
         }
@@ -156,9 +156,9 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "randomCrack") {
             questionImg.src = "./shapePuzzle1.png"
 
-            labelForQuestion.textContent = "Find the option that fits ?"
+            labelForQuestion.textContent = "Find the option that fits."
             questionInput.type = "text"
-            questionInput.value = "a b c or d"
+            questionInput.value = "a / b / c / d"
         }
         if (data == "randomFloor") {
             alert("Nothing here......")
@@ -195,7 +195,6 @@ window.addEventListener('DOMContentLoaded', () => {
             // 2,6 
         }
         if (currentQuestion == "glass") {
-            // colourful word search
             let answer = "length"
             let userAnswer = document.getElementById("questionInput").value
             let lowerCapAnswer = userAnswer.toLowerCase()
@@ -211,7 +210,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
-            // let answer = 'sqarr'
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
                 window.alert("correct!")
@@ -242,7 +240,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "luggage") {
-            // let answer = 'i+=3';
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'i+=3' || userAnswer == 'i += 3' || userAnswer == 'i + = 3') {
                 window.alert("correct!")
@@ -252,7 +249,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "randomCrack") {
-            // let answer = "c" || "C"
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'C' || userAnswer == 'c') {
                 window.alert("correct!")
