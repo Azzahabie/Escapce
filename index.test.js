@@ -72,21 +72,85 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function createQuestion(data){
+        if (data == "cupboard") {
+
+        }
+        if (data == "keypad") {
+
+        }
+        if (data == "dustbin") {
+
+        }
+        if (data == "glass") {
+
+        }
+        if (data == "crack") {
+
+        }
+        if (data == "window") {
+
+        }
+        if (data == "spiderweb") {
+
+        }
+        if (data == "lightbulb") {
+
+        }
+        if (data == "luggage") {
+
+        }
+        if (data == "randomCrack") {
+
+        }
+        if (data == "randomFloor") {
+
+        }
         if (data == "picture") {
             questionImg.src = "./maze.png"
             labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
             questionInput.type = "number"
             questionInput.value = 0234
-            
-            
-        } else {
+        } 
+        else {
             console.log("no load");
         }
     }
 
     function checkAnswer(){
+        if (currentQuestion == "cupboard") {
 
-        if(currentQuestion == "picture"){
+        }
+        if (currentQuestion == "keypad") {
+
+        }
+        if (currentQuestion == "dustbin") {
+
+        }
+        if (currentQuestion == "glass") {
+
+        }
+        if (currentQuestion == "crack") {
+
+        }
+        if (currentQuestion == "window") {
+
+        }
+        if (currentQuestion == "spiderweb") {
+
+        }
+        if (currentQuestion == "lightbulb") {
+
+        }
+        if (currentQuestion == "luggage") {
+
+        }
+        if (currentQuestion == "randomCrack") {
+
+        }
+        if (currentQuestion == "randomFloor") {
+
+        }
+        if(currentQuestion == "picture") {
             let answer = 7210787123513643157026804309
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer){
@@ -95,7 +159,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 return window.alert("oops try again")
             }
         }
-    }    
+    }
+
     function openModal(modal2) {
         currentQuestion = modal2
         createQuestion(modal2)
