@@ -112,7 +112,11 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.value = ""
         }
         if (data == "dustbin") {
+            questionImg.src = ""
 
+            labelForQuestion.textContent = "You found a piece of paper with number 2 and number 6, it might come in handy later."
+            questionInput.type = ""
+            questionInput.value = ""
         }
         if (data == "glass") {
 
@@ -121,7 +125,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (data == "window") {
-
+            questionImg.src = "./crosswordPuzzle.png"
+            labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes (No Caps)"
+            questionInput.type = "text"
+            questionInput.value = ""
         }
         if (data == "spiderweb") {
             questionImg.src = "./maze.png"
@@ -187,7 +194,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
-
+            let answer = 'sqarr'
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer) {
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
         }
         if (currentQuestion == "spiderweb") {
             let answer = 7210787123513643157026804309
