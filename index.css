@@ -14,11 +14,11 @@ body {
 }
 
 canvas {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: red;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: red;
+    vertical-align: baseline;
 }
 
 header {
@@ -28,17 +28,23 @@ header {
 /*pop up*/
 
 .modal {
-    display: flex; /* Hidden by default */
+    display: flex;
+    /* Hidden by default */
     justify-content: center;
-    position: absolute; /* Stay in place */
+    position: absolute;
+    /* Stay in place */
     padding: 0;
     margin: 0;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 .modal-content {
@@ -60,25 +66,4 @@ header {
     font-family: myriad-pro, sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-/*home*/
-
-#container {
-    background-color: #4C4C4C;
-}
-
-#header {
-    display: flex;
-    flex-direction: row;
-}
-
-#tab {
-    margin-left: 1em;
-}
-
-#content {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5em;
 }
