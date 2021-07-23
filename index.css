@@ -65,3 +65,13 @@ header {
     display: flex;
     flex-direction: row;
 }
+
+#tab {
+    margin-left: 1em;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5em;
+}
