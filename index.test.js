@@ -72,21 +72,78 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function createQuestion(data){
-        if (data == "picture") {
+        if (data == "cupboard") {
+
+        }
+        if (data == "keypad") {
+
+        }
+        if (data == "dustbin") {
+
+        }
+        if (data == "glass") {
+
+        }
+        if (data == "crack") {
+
+        }
+        if (data == "window") {
+
+        }
+        if (data == "spiderweb") {
             questionImg.src = "./maze.png"
             labelForQuestion.textContent = "Find your way out of the maze to get the numbers in the array"
             questionInput.type = "number"
             questionInput.value = 0234
+        }
+        if (data == "lightbulb") {
+
+        }
+        if (data == "luggage") {
+
+        }
+        if (data == "randomCrack") {
+            questionImg.src = "./shapePuzzle1.png"
             
-            
-        } else {
+            labelForQuestion.textContent = "Find the option that fits ?"
+            questionInput.type = "text"
+            questionInput.value = "a b c or d"
+        }
+        if (data == "randomFloor") {
+
+        }
+        if (data == "picture") {
+            questionImg.src = ""
+
+            labelForQuestion.textContent = "i = ?"
+            questionInput.type = "number"
+        } 
+        else {
+            console.log(data);
             console.log("no load");
         }
     }
 
     function checkAnswer(){
+        if (currentQuestion == "cupboard") {
 
-        if(currentQuestion == "picture"){
+        }
+        if (currentQuestion == "keypad") {
+
+        }
+        if (currentQuestion == "dustbin") {
+
+        }
+        if (currentQuestion == "glass") {
+
+        }
+        if (currentQuestion == "crack") {
+
+        }
+        if (currentQuestion == "window") {
+
+        }
+        if (currentQuestion == "spiderweb") {
             let answer = 7210787123513643157026804309
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer){
@@ -95,7 +152,35 @@ window.addEventListener('DOMContentLoaded', () => {
                 return window.alert("oops try again")
             }
         }
-    }    
+        if (currentQuestion == "lightbulb") {
+
+        }
+        if (currentQuestion == "luggage") {
+
+        }
+        if (currentQuestion == "randomCrack") {
+            // let answer = "c" || "C"
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == 'C' || userAnswer == 'c'){
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
+        }
+        if (currentQuestion == "randomFloor") {
+
+        }
+        if(currentQuestion == "picture") {
+            let answer = 4;
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer) {
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
+        }
+    }
+
     function openModal(modal2) {
         currentQuestion = modal2
         createQuestion(modal2)
@@ -107,7 +192,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
    function pressWhere(mousePosX, mousePosY) {
-        //console.log(mousePosX, mousePosY);
+        console.log(mousePosX, mousePosY);
         return new Promise(function (resolve, reject) {
             if ((mousePosX > 709 && mousePosX < 871) && (mousePosY > 319 && mousePosY < 591)) {
                 resolve("cupboard")
@@ -127,13 +212,15 @@ window.addEventListener('DOMContentLoaded', () => {
                 resolve("lightbulb")
             } else if ((mousePosX > 320 && mousePosX < 464) && (mousePosY > 597 && mousePosY < 690)) {
                 resolve("luggage")
-            } else if((mousePosX > 214 && mousePosX < 296) && (mousePosY > 463 && mousePosY < 296)) {
+            } else if((mousePosX > 643 && mousePosX < 751) && (mousePosY > 54 && mousePosY < 153)) {
                 resolve("randomCrack")
             } else if((mousePosX > 532 && mousePosX < 631) && (mousePosY > 608 && mousePosY < 694)) {
                 resolve("randomFloor")
             } else if((mousePosX > 40 && mousePosX < 149) && (mousePosY > 159 && mousePosY < 345)) {
                 resolve("picture")
-            } 
+            } else {
+                console.log("huh")
+            }
         })
     }
 })
