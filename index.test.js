@@ -26,17 +26,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     var currentQuestion;
 
-    const roomImg = document.getElementById("img")
-    const openImgBtn = document.getElementById("openImg")
-    const closeModalBtn = document.getElementById("close-Modal");
-    const modal = document.getElementById("modal")
+    // const roomImg = document.getElementById("img")
+    // const openImgBtn = document.getElementById("openImg")
+    // const closeModalBtn = document.getElementById("close-Modal");
+    // const modal = document.getElementById("modal")
 
     const questionImg = document.getElementById('questionImg')
     const questionInput = document.getElementById('questionInput')
     const labelForQuestion = document.getElementById('labelForQuestionInput')
     const answerQuestionBtn = document.getElementById('answerQuestion')
 
-    const openModalBtn = document.getElementById("openModal")
+    // const openModalBtn = document.getElementById("openModal")
 
     const foundCluesDiv = document.getElementById('foundClues')
     const foundCluesBtn = document.getElementById("found-icon")
@@ -61,9 +61,9 @@ window.addEventListener('DOMContentLoaded', () => {
     openModalBtn.addEventListener('click', () => {
         openModal('hi')
     })
-    openImgBtn.addEventListener('click', () => {
-        openImg()
-    })
+    //openImgBtn.addEventListener('click', () => {
+        //openImg()
+    //})
     answerQuestionBtn.addEventListener('click', () => {
         checkAnswer()
     })
@@ -76,13 +76,13 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
-    function openImg() {
-        if (roomImg.hidden == false) {
-            roomImg.hidden = true;
-        } else {
-            roomImg.hidden = false;
-        }
-    }
+    // function openImg() {
+    //     if (roomImg.hidden == false) {
+    //         roomImg.hidden = true;
+    //     } else {
+    //         roomImg.hidden = false;
+    //     }
+    // }
 
     function openFoundClues(){
         if (foundCluesDiv.hidden == true) {
@@ -102,7 +102,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     function createQuestion(data){
         if (data == "cupboard") {
-
+            alert("Nothing here......")
+            closeModal()
         }
         if (data == "keypad") {
             questionImg.src = ""
@@ -112,7 +113,11 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.value = ""
         }
         if (data == "dustbin") {
+            questionImg.src = ""
 
+            labelForQuestion.textContent = "You found a piece of paper with number 2 and number 6, it might come in handy later."
+            questionInput.type = ""
+            questionInput.value = ""
         }
         if (data == "glass") {
             questionImg.src = "./wordsearch.png"
@@ -120,10 +125,14 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.type = "test"
         }
         if (data == "crack") {
-
+            alert("Nothing here......")
+            closeModal()
         }
         if (data == "window") {
-
+            questionImg.src = "./crosswordPuzzle.png"
+            labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes (No Caps)"
+            questionInput.type = "text"
+            questionInput.value = ""
         }
         if (data == "spiderweb") {
             questionImg.src = "./maze.png"
@@ -151,7 +160,8 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.value = "a b c or d"
         }
         if (data == "randomFloor") {
-
+            alert("Nothing here......")
+            closeModal()
         }
         if (data == "picture") {
             questionImg.src = ""
@@ -174,7 +184,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let answer = 5610;
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("You have successfully exited the room congrats!")
+                window.alert("You have successfully exited the room congrats!")
+                window.location.href = 'home.html'
             } else {
                 return window.alert("Oops, wrong password! Try again!")
             }
@@ -198,12 +209,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
-
+            let answer = 'sqarr'
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer) {
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
         }
         if (currentQuestion == "spiderweb") {
             let answer = 7210787123513643157026804309
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
+                updateClues(currentQuestion)
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
@@ -249,6 +267,12 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    function updateClues(question){
+        let clue = document.getElementById('array_clue')
+        let answer = "7,2,1,0,7,8,7,1,2,3,5,1,3,6,4,3,1,5,7,0,2,6,8,0,4,3,0,9"
+        clue.textContent = answer
+    }   
 
     function openModal(modal2) {
         currentQuestion = modal2
