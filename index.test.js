@@ -100,7 +100,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (data == "randomCrack") {
-
+            questionImg.src = "./shapePuzzle1.png"
+            
+            labelForQuestion.textContent = "Find the order"
+            questionInput.type = "text"
+            questionInput.value = "a b c or d"
         }
         if (data == "randomFloor") {
 
@@ -112,6 +116,7 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.value = 0234
         } 
         else {
+            console.log(data);
             console.log("no load");
         }
     }
@@ -145,7 +150,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "randomCrack") {
-
+            let answer = "c" || "C"
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer){
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
         }
         if (currentQuestion == "randomFloor") {
 
@@ -172,7 +183,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
    function pressWhere(mousePosX, mousePosY) {
-        //console.log(mousePosX, mousePosY);
+        console.log(mousePosX, mousePosY);
         return new Promise(function (resolve, reject) {
             if ((mousePosX > 709 && mousePosX < 871) && (mousePosY > 319 && mousePosY < 591)) {
                 resolve("cupboard")
@@ -192,13 +203,15 @@ window.addEventListener('DOMContentLoaded', () => {
                 resolve("lightbulb")
             } else if ((mousePosX > 320 && mousePosX < 464) && (mousePosY > 597 && mousePosY < 690)) {
                 resolve("luggage")
-            } else if((mousePosX > 214 && mousePosX < 296) && (mousePosY > 463 && mousePosY < 296)) {
+            } else if((mousePosX > 643 && mousePosX < 751) && (mousePosY > 54 && mousePosY < 153)) {
                 resolve("randomCrack")
             } else if((mousePosX > 532 && mousePosX < 631) && (mousePosY > 608 && mousePosY < 694)) {
                 resolve("randomFloor")
             } else if((mousePosX > 40 && mousePosX < 149) && (mousePosY > 159 && mousePosY < 345)) {
                 resolve("picture")
-            } 
+            } else {
+                console.log("huh")
+            }
         })
     }
 })
