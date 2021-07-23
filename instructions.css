@@ -16,7 +16,7 @@ body {
     font-family: myriad-pro, sans-serif;
 }
 
-#objective {
+#objective-goal {
     font-size: 30px;
     color: #9B0505;
 }
@@ -27,9 +27,6 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* float: left;
-    margin-left: 30em;
-    margin-right: 10em; */
 }
 
 #hint-icon {
@@ -64,6 +61,11 @@ body {
     flex-direction: row;
 }
 
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 #next-button {
     background-color: #9B0505;
     border-radius: 20px;
@@ -76,4 +78,18 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
+}
+
+#back-button {
+    background-color: #9B0505;
+    border-radius: 20px;
+    /* margin-left: 12em; */
+    height: 40px;
+    width: 90px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    position: absolute;
+    right: 2em;
+    /* text-align: right; */
 }

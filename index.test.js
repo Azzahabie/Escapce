@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function createQuestion(data){
         if (data == "picture") {
             questionImg.src = "./maze.png"
-            labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
+            labelForQuestion.textContent = "Find your way out of the maze to get the numbers in the array"
             questionInput.type = "number"
             questionInput.value = 0234
             
