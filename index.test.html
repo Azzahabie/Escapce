@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Escape</title>
+    <link rel="stylesheet" href="https://use.typekit.net/uqe2cvk.css">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- <header id="top-header">
+        <h1>Welcome To Escape Room</h1>
+        <h3>code your way out of here!</h3>
+    </header> -->
+    <div>
+        <div id="canvas-div">
+            <img src="./theImage.png" id="img">
+        </div>
+
+        <button id="openModal">OPEN ME</button>
+        <button id="openCanvas">Open Canvas</button>
+
+        <div style="height: 200px;">
+        </div>
+
+        <!-- <div class="modal" id="modal">
+            <div class="modal-content">
+                <div id="content-in-modal">
+                    <h2 id="modal-h2"></h2>
+                    <button id="closeModal">close modal</button>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('img').click(function(e) {
+            var offset = $(this).offset();
+            var X = (e.pageX - offset.left);
+            var Y = (e.pageY - offset.top);
+            $('#coord').text('X: ' + X + ', Y: ' + Y);
+
+            console.log(X, Y);
+        });
+    });
+</script>
+
+</html>
