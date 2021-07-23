@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/uqe2cvk.css">
     <script src="jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.test.js"></script>
 </head>
 
 <body>
@@ -36,18 +37,4 @@
 
     </div>
 </body>
-
-<script>
-    $(document).ready(function() {
-        $('img').click(function(e) {
-            var offset = $(this).offset();
-            var X = (e.pageX - offset.left);
-            var Y = (e.pageY - offset.top);
-            $('#coord').text('X: ' + X + ', Y: ' + Y);
-
-            console.log(X, Y);
-        });
-    });
-</script>
-
 </html>
