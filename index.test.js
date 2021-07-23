@@ -76,7 +76,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (data == "keypad") {
+            questionImg.src = ""
 
+            labelForQuestion.textContent = "Enter the password to exit: "
+            questionInput.type = "number"
+            questionInput.value = ""
         }
         if (data == "dustbin") {
 
@@ -94,13 +98,19 @@ window.addEventListener('DOMContentLoaded', () => {
             questionImg.src = "./maze.png"
             labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
             questionInput.type = "number"
-            questionInput.value = 0234
+            questionInput.value = ""
         }
         if (data == "lightbulb") {
-
+            questionImg.src = "./morsecode.png"
+            labelForQuestion.textContent = "Decode:  ... .-.. .. -.-. . (No Caps)"
+            questionInput.type = "text"
+            questionInput.value = ""
         }
         if (data == "luggage") {
-
+            questionImg.src = "./braillepicandqn.png"
+            labelForQuestion.textContent = "Decoded Text: "
+            questionInput.type = "text"
+            questionInput.value = ""
         }
         if (data == "randomCrack") {
             questionImg.src = "./shapePuzzle1.png"
@@ -117,6 +127,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             labelForQuestion.textContent = "i = ?"
             questionInput.type = "number"
+            questionInput.value = ""
         } 
         else {
             console.log(data);
@@ -129,7 +140,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "keypad") {
-
+            let answer = 5610;
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer){
+                return window.alert("You have successfully exited the room congrats!")
+            } else {
+                return window.alert("Oops, wrong password! Try again!")
+            }
         }
         if (currentQuestion == "dustbin") {
 
@@ -153,10 +170,22 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "lightbulb") {
-
+            let answer = 'slice';
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer){
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
         }
         if (currentQuestion == "luggage") {
-
+            let answer = 'i+=3';
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer){
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
         }
         if (currentQuestion == "randomCrack") {
             // let answer = "c" || "C"
