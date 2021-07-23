@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(36, 32, 32);
+    color: white;
+}
+
+#intro {
+    margin-left: 8em;
+    margin-top: 1em;
+    font-size: 20px;
+    font-family: myriad-pro, sans-serif;
+}
+
+#paragraph {
+    margin-left: 11em;
+    margin-top: 3em;
+    font-family: myriad-pro, sans-serif;
+}
+
+#objective {
+    font-size: 30px;
+    color: #9B0505;
+}
+
+#pic {
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* float: left;
+    margin-left: 30em;
+    margin-right: 10em; */
+}
+
+#hint-icon {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 90px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#found-icon {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#content {
+    flex-direction: row;
+}
+
+#next-button {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
