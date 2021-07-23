@@ -37,9 +37,22 @@ window.addEventListener('DOMContentLoaded', () => {
     const answerQuestionBtn = document.getElementById('answerQuestion')
     
     const openModalBtn = document.getElementById("openModal")
+
+    const foundCluesDiv = document.getElementById('foundClues')
+    const foundCluesBtn = document.getElementById("found-icon")
+
+    const getHelpBtn = document.getElementById("hint-icon")
+    const getHelpDiv = document.getElementById('getHelpDiv')
  
 
     modal.style.display = "none"
+
+    getHelpBtn.addEventListener('click',()=>{
+        openGetHelp()
+    })
+    foundCluesBtn.addEventListener('click',()=>{
+        openFoundClues()
+    })
 
     closeModalBtn.addEventListener('click', () => {
         closeModal()
@@ -71,6 +84,22 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function openFoundClues(){
+        if (foundCluesDiv.hidden == true) {
+            foundCluesDiv.hidden = false 
+            
+        } else {
+            foundCluesDiv.hidden = true
+        }
+    }
+    function openGetHelp(){
+        if (getHelpDiv.hidden == true) {
+            getHelpDiv.hidden = false 
+            
+        } else {
+            getHelpDiv.hidden = true
+        }
+    }
     function createQuestion(data){
         if (data == "cupboard") {
 
