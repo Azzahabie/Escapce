@@ -25,7 +25,6 @@ body {
     width: 15px;
     height: 50px;
     background-color: #9B0505;
-    /* margin-left: 65em; */
     margin-top: 0.5em;
     position: absolute;
     right: 9em;
@@ -34,7 +33,7 @@ body {
 }
 
 #rectangle-pic {
-    width: 25px;
+    width: 17px;
     height: 300px;
     background-color: #9B0505;
     margin-left: 5em;
