@@ -17,7 +17,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
             pressWhere(X, Y)
                 .then((data) => {
-                    openModal(data)
+                    // console.log(data)
+                    return openModal(data)
                 })
         });
     });
@@ -28,8 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // const roomImg = document.getElementById("img")
     // const openImgBtn = document.getElementById("openImg")
-    // const closeModalBtn = document.getElementById("close-Modal");
-    // const modal = document.getElementById("modal")
+    const closeModalBtn = document.getElementById("close-Modal");
+    const modal = document.getElementById("modal")
 
     const questionImg = document.getElementById('questionImg')
     const questionInput = document.getElementById('questionInput')
@@ -58,13 +59,16 @@ window.addEventListener('DOMContentLoaded', () => {
         closeModal()
     })
 
-    openModalBtn.addEventListener('click', () => {
-        openModal('hi')
-    })
+    // openModalBtn.addEventListener('click', () => {
+    //     openModal('hi')
+    // })
+
     //openImgBtn.addEventListener('click', () => {
         //openImg()
     //})
+    
     answerQuestionBtn.addEventListener('click', () => {
+        console.log("answer button clicked")
         checkAnswer()
     })
 
@@ -76,6 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
+
     // function openImg() {
     //     if (roomImg.hidden == false) {
     //         roomImg.hidden = true;
@@ -100,6 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
             getHelpDiv.hidden = true
         }
     }
+
     function createQuestion(data){
         if (data == "cupboard") {
             alert("Nothing here......")
@@ -177,15 +183,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkAnswer() {
+        console.log(currentQuestion)
         if (currentQuestion == "cupboard") {
 
         }
         if (currentQuestion == "keypad") {
             let answer = 5610;
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == answer) {
-                window.alert("You have successfully exited the room congrats!")
-                window.location.href = 'home.html'
+                return window.alert("You have successfully exited the room congrats!")
+                // window.location.href = 'home.html'
             } else {
                 return window.alert("Oops, wrong password! Try again!")
             }
@@ -196,7 +203,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (currentQuestion == "glass") {
             // colourful word search
             let answer = "length"
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             let lowerCapAnswer = userAnswer.toLowerCase()
             console.log( typeof lowerCapAnswer);
             if (lowerCapAnswer == answer) {
@@ -210,7 +217,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "window") {
             let answer = 'sqarr'
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == answer) {
                 return window.alert("correct!")
             } else {
@@ -219,7 +226,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "spiderweb") {
             let answer = 7210787123513643157026804309
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == answer) {
                 updateClues(currentQuestion)
                 return window.alert("correct!")
@@ -229,7 +236,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "lightbulb") {
             let answer = 'slice';
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == answer) {
                 return window.alert("correct!")
             } else {
@@ -238,7 +245,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "luggage") {
             let answer = 'i+=3';
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == answer) {
                 return window.alert("correct!")
             } else {
@@ -247,7 +254,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "randomCrack") {
             // let answer = "c" || "C"
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == 'C' || userAnswer == 'c') {
                 return window.alert("correct!")
             } else {
@@ -259,7 +266,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "picture") {
             let answer = 4;
-            let userAnswer = document.getElementById("questionInput").value
+            let userAnswer = questionInput.value
             if (userAnswer == answer) {
                 return window.alert("correct!")
             } else {
@@ -275,7 +282,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }   
 
     function openModal(modal2) {
+        // console.log(modal2)
         currentQuestion = modal2
+        // console.log(currentQuestion)
         createQuestion(modal2)
         if (modal.style.display === "none") {
             modal.style.display = "block";
