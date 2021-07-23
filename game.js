@@ -17,8 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             pressWhere(X, Y)
                 .then((data) => {
-                    // console.log(data)
-                    return openModal(data)
+                    openModal(data)
                 })
         });
     });
@@ -44,14 +43,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const getHelpBtn = document.getElementById("hint-icon")
     const getHelpDiv = document.getElementById('getHelpDiv')
- 
+
 
     modal.style.display = "none"
 
-    getHelpBtn.addEventListener('click',()=>{
+    getHelpBtn.addEventListener('click', () => {
         openGetHelp()
     })
-    foundCluesBtn.addEventListener('click',()=>{
+    foundCluesBtn.addEventListener('click', () => {
         openFoundClues()
     })
 
@@ -62,13 +61,10 @@ window.addEventListener('DOMContentLoaded', () => {
     // openModalBtn.addEventListener('click', () => {
     //     openModal('hi')
     // })
-
     //openImgBtn.addEventListener('click', () => {
-        //openImg()
+    //openImg()
     //})
-    
     answerQuestionBtn.addEventListener('click', () => {
-        console.log("answer button clicked")
         checkAnswer()
     })
 
@@ -80,7 +76,6 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
-
     // function openImg() {
     //     if (roomImg.hidden == false) {
     //         roomImg.hidden = true;
@@ -89,24 +84,24 @@ window.addEventListener('DOMContentLoaded', () => {
     //     }
     // }
 
-    function openFoundClues(){
+    function openFoundClues() {
         if (foundCluesDiv.hidden == true) {
-            foundCluesDiv.hidden = false 
-            
+            foundCluesDiv.hidden = false
+
         } else {
             foundCluesDiv.hidden = true
         }
     }
-    function openGetHelp(){
+    function openGetHelp() {
         if (getHelpDiv.hidden == true) {
-            getHelpDiv.hidden = false 
-            
+            getHelpDiv.hidden = false
+
         } else {
             getHelpDiv.hidden = true
         }
     }
 
-    function createQuestion(data){
+    function createQuestion(data) {
         if (data == "cupboard") {
             alert("Nothing here......")
             closeModal()
@@ -114,7 +109,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "keypad") {
             questionImg.src = ""
 
-            labelForQuestion.textContent = "Enter the password to exit: "
+            labelForQuestion.textContent = "Given parts of the for loop: 1) var sum = ' '; 2) sum += 3) Enter the password to exit: "
             questionInput.type = "number"
             questionInput.value = ""
         }
@@ -136,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (data == "window") {
             questionImg.src = "./crosswordPuzzle.png"
-            labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes (No Caps)"
+            labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes."
             questionInput.type = "text"
             questionInput.value = ""
         }
@@ -161,9 +156,9 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "randomCrack") {
             questionImg.src = "./shapePuzzle1.png"
 
-            labelForQuestion.textContent = "Find the option that fits ?"
+            labelForQuestion.textContent = "Find the option that fits."
             questionInput.type = "text"
-            questionInput.value = "a b c or d"
+            questionInput.value = "a / b / c / d"
         }
         if (data == "randomFloor") {
             alert("Nothing here......")
@@ -183,16 +178,15 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkAnswer() {
-        console.log(currentQuestion)
         if (currentQuestion == "cupboard") {
 
         }
         if (currentQuestion == "keypad") {
             let answer = 5610;
-            let userAnswer = questionInput.value
+            let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("You have successfully exited the room congrats!")
-                // window.location.href = 'home.html'
+                window.alert("You have successfully exited the room congrats!")
+                window.location.href = 'index.html'
             } else {
                 return window.alert("Oops, wrong password! Try again!")
             }
@@ -201,13 +195,13 @@ window.addEventListener('DOMContentLoaded', () => {
             // 2,6 
         }
         if (currentQuestion == "glass") {
-            // colourful word search
             let answer = "length"
-            let userAnswer = questionInput.value
+            let userAnswer = document.getElementById("questionInput").value
             let lowerCapAnswer = userAnswer.toLowerCase()
-            console.log( typeof lowerCapAnswer);
+            console.log(typeof lowerCapAnswer);
             if (lowerCapAnswer == answer) {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -216,47 +210,49 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
-            let answer = 'sqarr'
-            let userAnswer = questionInput.value
-            if (userAnswer == answer) {
-                return window.alert("correct!")
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
         }
         if (currentQuestion == "spiderweb") {
             let answer = 7210787123513643157026804309
-            let userAnswer = questionInput.value
+            let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
                 updateClues(currentQuestion)
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
         }
         if (currentQuestion == "lightbulb") {
             let answer = 'slice';
-            let userAnswer = questionInput.value
+            let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
         }
         if (currentQuestion == "luggage") {
-            let answer = 'i+=3';
-            let userAnswer = questionInput.value
-            if (userAnswer == answer) {
-                return window.alert("correct!")
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == 'i+=3' || userAnswer == 'i += 3' || userAnswer == 'i + = 3') {
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
         }
         if (currentQuestion == "randomCrack") {
-            // let answer = "c" || "C"
-            let userAnswer = questionInput.value
+            let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'C' || userAnswer == 'c') {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -266,25 +262,24 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (currentQuestion == "picture") {
             let answer = 4;
-            let userAnswer = questionInput.value
+            let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("correct!")
+                window.alert("correct!")
+                window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
         }
     }
 
-    function updateClues(question){
+    function updateClues(question) {
         let clue = document.getElementById('array_clue')
         let answer = "7,2,1,0,7,8,7,1,2,3,5,1,3,6,4,3,1,5,7,0,2,6,8,0,4,3,0,9"
         clue.textContent = answer
-    }   
+    }
 
     function openModal(modal2) {
-        // console.log(modal2)
         currentQuestion = modal2
-        // console.log(currentQuestion)
         createQuestion(modal2)
         if (modal.style.display === "none") {
             modal.style.display = "block";
