@@ -24,8 +24,6 @@ header {
     text-align: center;
 }
 
-/*pop up*/
-
 .modal {
     display: flex;
     /* Hidden by default */
@@ -91,11 +89,11 @@ header {
     padding: 5px;
     margin: 10px 0px 10px 0px;
     width: 100px;
-    
+    width: 40%;
+    align-self: center;
 }
 
 #answerQuestion {
-    /* font-size: 1.3em; */
     width: 90px;
     height: 40px;
     background-color: #9B0505;
@@ -103,6 +101,11 @@ header {
     font-family: myriad-pro, sans-serif;
     font-style: normal;
     color: white;
+    margin-left: 1em;
+}
+
+#ans {
+    flex-direction: row;
 }
 
 #close-Modal {
@@ -144,24 +147,25 @@ header {
     margin-top: 2em;
 }
 
-#barOfHope{
+#barOfHope {
     margin: auto;
-    width:70%;
-   display: flex;
-   justify-content: space-evenly;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#foundClues{
+#foundClues {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
     border: 1px solid rgb(158, 52, 52);
- }
-#getHelpDiv{
+}
+
+#getHelpDiv {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
     border: 1px solid rgb(158, 52, 52);
- }
+}
