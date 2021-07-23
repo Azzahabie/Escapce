@@ -1,0 +1,167 @@
+body {
+    background-color: rgb(36, 32, 32);
+    color: white;
+}
+
+#top-header {
+    border: 1px solid rgb(156, 152, 152);
+}
+
+#canvas-div {
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: red;
+    vertical-align: baseline;
+}
+
+header {
+    text-align: center;
+}
+
+/*pop up*/
+
+.modal {
+    display: flex;
+    /* Hidden by default */
+    justify-content: center;
+    position: absolute;
+    /* Stay in place */
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    padding: auto;
+    margin: auto;
+    margin-top: 20px;
+    width: 75%;
+    height: auto;
+    display: flex;
+    background-color: gray;
+    opacity: 90%;
+    flex-direction: column;
+}
+
+#content-in-modal {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-content-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-h2 {
+    font-family: myriad-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#labelForQuestionInput {
+    font-size: 1.7em;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+}
+
+#questionImg {
+    width: 600px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#questionInput {
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+    width: 100px;
+    
+}
+
+#answerQuestion {
+    /* font-size: 1.3em; */
+    width: 90px;
+    height: 40px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+}
+
+#close-Modal {
+    padding: 10px;
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    color: white;
+}
+
+#hint-icon {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#found-icon {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#barOfHope{
+    margin: auto;
+    width:70%;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+#foundClues{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid rgb(158, 52, 52);
+ }
+#getHelpDiv{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid rgb(158, 52, 52);
+ }
