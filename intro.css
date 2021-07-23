@@ -73,7 +73,6 @@ body {
 #back-button {
     background-color: #9B0505;
     border-radius: 20px;
-    /* margin-left: 12em; */
     height: 40px;
     width: 90px;
     font-family: myriad-pro, sans-serif;
@@ -81,13 +80,11 @@ body {
     color: white;
     position: absolute;
     right: 18em;
-    /* text-align: right; */
 }
 
 #next-button {
     background-color: #9B0505;
     border-radius: 20px;
-    /* margin-left: 12em; */
     height: 40px;
     width: 90px;
     font-family: myriad-pro, sans-serif;
@@ -95,5 +92,4 @@ body {
     color: white;
     position: absolute;
     right: 10em;
-    /* text-align: right; */
 }
