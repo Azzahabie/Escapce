@@ -181,7 +181,8 @@ window.addEventListener('DOMContentLoaded', () => {
             let answer = 5610;
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
-                return window.alert("You have successfully exited the room congrats!")
+                window.alert("You have successfully exited the room congrats!")
+                window.location.href = 'home.html'
             } else {
                 return window.alert("Oops, wrong password! Try again!")
             }
