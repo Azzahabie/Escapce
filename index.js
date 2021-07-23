@@ -29,19 +29,13 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     canvas.addEventListener('click', ((event) => {
-        // pressWhere(event.clientX,event.clientY)
-        // .then((data)=>{
-        //     console.log(data)
-        //     openModal(data)
-        // })
-        //console.log(event.clientX, event.clientY);
-
         getProperMousePos(canvas,event)
         .then(data=>{
             pressWhere(data.x,data.y)
             .then(data=>{
-                console.log(data);
+                openModal(data)
             })
+            .catch()
         })
         
     }))
@@ -101,7 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 resolve("keypad")
             } else if((mousePosX > 888 && mousePosX < 936) && (mousePosY > 584 && mousePosY < 684)) {
                 resolve("dustbin")
-            } else if((mousePosX > 116 && mousePosX < 138) && (mousePosY > 564 && mousePosY < 691)) {
+            } else if((mousePosX > 90 && mousePosX < 166) && (mousePosY > 566 && mousePosY < 688)) {
                 resolve("glass")
             } else if((mousePosX > 224 && mousePosX < 286) && (mousePosY > 469 && mousePosY < 534)) {
                 resolve("crack")
@@ -113,11 +107,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 resolve("lightbulb")
             } else if((mousePosX > 329 && mousePosX < 462) && (mousePosY > 607 && mousePosY < 689)) {
                 resolve("luggage")
+            } else if((mousePosX > 652 && mousePosX < 758) && (mousePosY > 52 && mousePosY < 153)) {
+                resolve("randomCrack")
+            } else if((mousePosX > 526 && mousePosX < 616) && (mousePosY > 612 && mousePosY < 699)) {
+                resolve("randomFloor")
             } else if((mousePosX > 30 && mousePosX < 154) && (mousePosY > 152 && mousePosY < 352)) {
                 resolve("picture")
-            } else {
-                resolve("failed")
-            }
+            } 
         })
     }   
 
