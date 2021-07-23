@@ -45,7 +45,7 @@ body {
 }
 
 #rectangle-pic {
-    width: 25px;
+    width: 50px;
     height: 300px;
     background-color: #9B0505;
     margin-left: 5em;
@@ -68,6 +68,20 @@ body {
     padding-right: 5em;
     font-family: myriad-pro, sans-serif;
     font-size: 17px;
+}
+
+#back-button {
+    background-color: #9B0505;
+    border-radius: 20px;
+    /* margin-left: 12em; */
+    height: 40px;
+    width: 90px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    position: absolute;
+    right: 18em;
+    /* text-align: right; */
 }
 
 #next-button {

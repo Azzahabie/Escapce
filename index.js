@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById("modal")
     const closeModalBtn = document.getElementById("closeModal")
 
-
     //listeners
     openModalBtn.addEventListener('click', () => {
         alert('opened')
@@ -54,10 +53,8 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
         modalContent.textContent = modal2
-
     }
     function closeModal() {
-
         if (modal.style.display === "none") {
             modal.style.display = "block";
         } else {
