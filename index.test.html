@@ -27,11 +27,21 @@
 
         
             <div id="foundClues" hidden>
-                <h2>Clue 1 : i = 4</h3>
+                <h2>var sqArr = [<span id="array_clue">......</span>];<br>
+                    var sum = '';<br>
+                    for (let i = 4; i <span>&#60;</span> sqArr.length; i+=3 ) {<br>
+                        
+                        sum += sqArr[i]
+                        <br>
+                    }
+                    <br>
+                    console.log('The Code Is: sum_slice(2,6)
+                </h2>
             </div>
 
             <div id="getHelpDiv" hidden>
                 <h2>how many eyes are in the image?</h3>
+                <h2>password is 5610 :) </h3>
             </div>
         
         
@@ -51,11 +61,11 @@
                             <label for="questionInput" id="labelForQuestionInput"></label>
                         </div>
                         <input type="text" id="questionInput">
-                        <button id="answerQuestion">Answer</button>
+                        <button id="answerQuestion">✏️ Answer</button>
                     </div>
 
                 </div>
-                <button id="close-Modal">Quit Question</button>
+                <button id="close-Modal">❌ Quit Question</button>
             </div>
         </div>
 
