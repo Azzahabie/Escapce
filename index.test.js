@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (data == "spiderweb") {
             questionImg.src = "./maze.png"
-            labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
+            labelForQuestion.textContent = "Escape the maze to get the the numbers needed in the for loop array."
             questionInput.type = "number"
             questionInput.value = ""
         }
