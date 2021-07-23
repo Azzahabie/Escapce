@@ -26,17 +26,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     var currentQuestion;
 
-    const roomImg = document.getElementById("img")
-    const openImgBtn = document.getElementById("openImg")
-    const closeModalBtn = document.getElementById("close-Modal");
-    const modal = document.getElementById("modal")
+    // const roomImg = document.getElementById("img")
+    // const openImgBtn = document.getElementById("openImg")
+    // const closeModalBtn = document.getElementById("close-Modal");
+    // const modal = document.getElementById("modal")
 
     const questionImg = document.getElementById('questionImg')
     const questionInput = document.getElementById('questionInput')
     const labelForQuestion = document.getElementById('labelForQuestionInput')
     const answerQuestionBtn = document.getElementById('answerQuestion')
 
-    const openModalBtn = document.getElementById("openModal")
+    // const openModalBtn = document.getElementById("openModal")
 
     const foundCluesDiv = document.getElementById('foundClues')
     const foundCluesBtn = document.getElementById("found-icon")
@@ -61,9 +61,9 @@ window.addEventListener('DOMContentLoaded', () => {
     openModalBtn.addEventListener('click', () => {
         openModal('hi')
     })
-    openImgBtn.addEventListener('click', () => {
-        openImg()
-    })
+    //openImgBtn.addEventListener('click', () => {
+        //openImg()
+    //})
     answerQuestionBtn.addEventListener('click', () => {
         checkAnswer()
     })
@@ -76,13 +76,13 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
-    function openImg() {
-        if (roomImg.hidden == false) {
-            roomImg.hidden = true;
-        } else {
-            roomImg.hidden = false;
-        }
-    }
+    // function openImg() {
+    //     if (roomImg.hidden == false) {
+    //         roomImg.hidden = true;
+    //     } else {
+    //         roomImg.hidden = false;
+    //     }
+    // }
 
     function openFoundClues(){
         if (foundCluesDiv.hidden == true) {
