@@ -210,9 +210,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
-            let answer = 'sqarr'
+            // let answer = 'sqarr'
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer) {
+            if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
@@ -238,9 +238,9 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "luggage") {
-            let answer = 'i+=3';
+            // let answer = 'i+=3';
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer) {
+            if (userAnswer == 'i+=3' || userAnswer == 'i += 3' || userAnswer == 'i + = 3') {
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
