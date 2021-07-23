@@ -28,8 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // const roomImg = document.getElementById("img")
     // const openImgBtn = document.getElementById("openImg")
-    // const closeModalBtn = document.getElementById("close-Modal");
-    // const modal = document.getElementById("modal")
+    const closeModalBtn = document.getElementById("close-Modal");
+    const modal = document.getElementById("modal")
 
     const questionImg = document.getElementById('questionImg')
     const questionInput = document.getElementById('questionInput')
@@ -58,9 +58,9 @@ window.addEventListener('DOMContentLoaded', () => {
         closeModal()
     })
 
-    openModalBtn.addEventListener('click', () => {
-        openModal('hi')
-    })
+    // openModalBtn.addEventListener('click', () => {
+    //     openModal('hi')
+    // })
     //openImgBtn.addEventListener('click', () => {
     //openImg()
     //})
@@ -100,6 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
             getHelpDiv.hidden = true
         }
     }
+    
     function createQuestion(data) {
         if (data == "cupboard") {
             alert("Nothing here......")
