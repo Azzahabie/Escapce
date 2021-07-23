@@ -29,18 +29,11 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     canvas.addEventListener('click', ((event) => {
-        // pressWhere(event.clientX,event.clientY)
-        // .then((data)=>{
-        //     console.log(data)
-        //     openModal(data)
-        // })
-        //console.log(event.clientX, event.clientY);
-
         getProperMousePos(canvas,event)
         .then(data=>{
             pressWhere(data.x,data.y)
             .then(data=>{
-                console.log(data);
+                openModal(data)
             })
         })
         
