@@ -204,6 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let answer = 7210787123513643157026804309
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
+                updateClues(currentQuestion)
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
@@ -249,6 +250,12 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
+    function updateClues(question){
+        let clue = document.getElementById('array_clue')
+        let answer = "7,2,1,0,7,8,7,1,2,3,5,1,3,6,4,3,1,5,7,0,2,6,8,0,4,3,0,9"
+        clue.textContent = answer
+    }   
 
     function openModal(modal2) {
         currentQuestion = modal2
