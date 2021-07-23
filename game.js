@@ -100,7 +100,7 @@ window.addEventListener('DOMContentLoaded', () => {
             getHelpDiv.hidden = true
         }
     }
-    
+
     function createQuestion(data) {
         if (data == "cupboard") {
             alert("Nothing here......")

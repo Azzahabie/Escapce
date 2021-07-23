@@ -91,7 +91,6 @@ header {
     padding: 5px;
     margin: 10px 0px 10px 0px;
     width: 100px;
-    
 }
 
 #answerQuestion {
@@ -144,24 +143,37 @@ header {
     margin-top: 2em;
 }
 
-#barOfHope{
+#barOfHope {
     margin: auto;
-    width:70%;
-   display: flex;
-   justify-content: space-evenly;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#foundClues{
+#foundClues {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
     border: 1px solid rgb(158, 52, 52);
- }
-#getHelpDiv{
+}
+
+#getHelpDiv {
     width: 50%;
     text-align: center;
     margin: 0 auto;
     margin-top: 20px;
     border: 1px solid rgb(158, 52, 52);
- }
+}
+
+#back-button {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 90px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    position: absolute;
+    right: 2em;
+}
