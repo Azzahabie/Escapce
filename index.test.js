@@ -43,14 +43,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const getHelpBtn = document.getElementById("hint-icon")
     const getHelpDiv = document.getElementById('getHelpDiv')
- 
+
 
     modal.style.display = "none"
 
-    getHelpBtn.addEventListener('click',()=>{
+    getHelpBtn.addEventListener('click', () => {
         openGetHelp()
     })
-    foundCluesBtn.addEventListener('click',()=>{
+    foundCluesBtn.addEventListener('click', () => {
         openFoundClues()
     })
 
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', () => {
         openModal('hi')
     })
     //openImgBtn.addEventListener('click', () => {
-        //openImg()
+    //openImg()
     //})
     answerQuestionBtn.addEventListener('click', () => {
         checkAnswer()
@@ -84,23 +84,23 @@ window.addEventListener('DOMContentLoaded', () => {
     //     }
     // }
 
-    function openFoundClues(){
+    function openFoundClues() {
         if (foundCluesDiv.hidden == true) {
-            foundCluesDiv.hidden = false 
-            
+            foundCluesDiv.hidden = false
+
         } else {
             foundCluesDiv.hidden = true
         }
     }
-    function openGetHelp(){
+    function openGetHelp() {
         if (getHelpDiv.hidden == true) {
-            getHelpDiv.hidden = false 
-            
+            getHelpDiv.hidden = false
+
         } else {
             getHelpDiv.hidden = true
         }
     }
-    function createQuestion(data){
+    function createQuestion(data) {
         if (data == "cupboard") {
             alert("Nothing here......")
             closeModal()
@@ -198,7 +198,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let answer = "length"
             let userAnswer = document.getElementById("questionInput").value
             let lowerCapAnswer = userAnswer.toLowerCase()
-            console.log( typeof lowerCapAnswer);
+            console.log(typeof lowerCapAnswer);
             if (lowerCapAnswer == answer) {
                 return window.alert("correct!")
             } else {
@@ -268,11 +268,11 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateClues(question){
+    function updateClues(question) {
         let clue = document.getElementById('array_clue')
         let answer = "7,2,1,0,7,8,7,1,2,3,5,1,3,6,4,3,1,5,7,0,2,6,8,0,4,3,0,9"
         clue.textContent = answer
-    }   
+    }
 
     function openModal(modal2) {
         currentQuestion = modal2
