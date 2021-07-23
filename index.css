@@ -1,6 +1,18 @@
-main{
-    background-color: blanchedalmond;
+body{
+    background-color: rgb(36, 32, 32);
+    color: white;
 }
+#top-header{
+    border: 1px solid rgb(156, 152, 152);
+    
+}
+
+#canvas-div{
+    display: flex;
+    justify-content: center;
+    
+}
+
 canvas {
     margin: 0;
     padding: 0;
@@ -21,8 +33,17 @@ canvas {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
 
 .modal-content{
-    display: none;
+    margin: auto;
+    width: 75%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+
+header{
+    text-align: center;
 }
