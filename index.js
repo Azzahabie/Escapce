@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', () => {
         console.log(mousePosX, mousePosY);
         return new Promise(function (resolve, reject) {
             if ((mousePosX > 714 && mousePosX < 864) && (mousePosY > 323 && mousePosY < 589)) {
-                resolve("cardBoard")
+                resolve("cupboard")
             } else if ((mousePosX > 960 && mousePosX < 999) && (mousePosY > 451 && mousePosY < 548)) {
                 resolve("keypad")
             } else if ((mousePosX > 888 && mousePosX < 936) && (mousePosY > 584 && mousePosY < 684)) {
