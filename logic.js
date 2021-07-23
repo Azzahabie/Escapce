@@ -1,5 +1,5 @@
-function pressWhere(){
+function pressWhere() {
     console.log("hi");
 }
 
-export default {pressWhere}
+export default { pressWhere }

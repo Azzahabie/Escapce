@@ -29,13 +29,13 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     canvas.addEventListener('click', ((event) => {
-        pressWhere(event.clientX,event.clientY)
-        .then((data)=>{
-            console.log(data)
-            openModal(data)
-        })
+        pressWhere(event.clientX, event.clientY)
+            .then((data) => {
+                console.log(data)
+                openModal(data)
+            })
         console.log(event.clientX, event.clientY);
-        
+
     }))
 
     //functions
@@ -61,8 +61,8 @@ window.addEventListener('DOMContentLoaded', () => {
             canvas.hidden = false;
             console.log("h is f");
         } else {
-           canvas.hidden = true;
-           console.log("h is t");
+            canvas.hidden = true;
+            console.log("h is t");
         }
     }
 
@@ -74,33 +74,33 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function pressWhere(mousePosX, mousePosY){
-        return new Promise(function(resolve,reject){
+    function pressWhere(mousePosX, mousePosY) {
+        return new Promise(function (resolve, reject) {
             if ((mousePosX > 904 && mousePosX < 1104) && (mousePosY > 141 && mousePosY < 429)) {
                 resolve("cupboard")
-            } else if((mousePosX > 1190 && mousePosX < 1233) && (mousePosY > 348 && mousePosY < 430)) {
+            } else if ((mousePosX > 1190 && mousePosX < 1233) && (mousePosY > 348 && mousePosY < 430)) {
                 resolve("keypad")
-            } else if((mousePosX > 1129 && mousePosX < 1166) && (mousePosY > 411 && mousePosY < 499)) {
+            } else if ((mousePosX > 1129 && mousePosX < 1166) && (mousePosY > 411 && mousePosY < 499)) {
                 resolve("dustbin")
-            } else if((mousePosX > 333 && mousePosX < 392) && (mousePosY > 435 && mousePosY < 559)) {
+            } else if ((mousePosX > 333 && mousePosX < 392) && (mousePosY > 435 && mousePosY < 559)) {
                 resolve("glass")
-            } else if((mousePosX > 578 && mousePosX < 720) && (mousePosY > 349 && mousePosY < 413)) {
+            } else if ((mousePosX > 578 && mousePosX < 720) && (mousePosY > 349 && mousePosY < 413)) {
                 resolve("pillow")
-            } else if((mousePosX > 632 && mousePosX < 695) && (mousePosY > 127 && mousePosY < 199)) {
+            } else if ((mousePosX > 632 && mousePosX < 695) && (mousePosY > 127 && mousePosY < 199)) {
                 resolve("window")
-            } else if((mousePosX > 1013 && mousePosX < 1104) && (mousePosY > 197 && mousePosY < 235)) {
+            } else if ((mousePosX > 1013 && mousePosX < 1104) && (mousePosY > 197 && mousePosY < 235)) {
                 resolve("spiderweb")
-            } else if((mousePosX > 705 && mousePosX < 728) && (mousePosY > 197 && mousePosY < 235)) {
+            } else if ((mousePosX > 705 && mousePosX < 728) && (mousePosY > 197 && mousePosY < 235)) {
                 resolve("lightbulb")
-            } else if((mousePosX > 551 && mousePosX < 693) && (mousePosY > 225 && mousePosY < 319)) {
+            } else if ((mousePosX > 551 && mousePosX < 693) && (mousePosY > 225 && mousePosY < 319)) {
                 resolve("luggage")
-            } else if((mousePosX > 470 && mousePosX < 520) && (mousePosY > 320 && mousePosY < 520)) {
+            } else if ((mousePosX > 470 && mousePosX < 520) && (mousePosY > 320 && mousePosY < 520)) {
                 resolve("floormat")
-            } else if((mousePosX > 272 && mousePosX < 380) && (mousePosY > 99 && mousePosY < 289)) {
+            } else if ((mousePosX > 272 && mousePosX < 380) && (mousePosY > 99 && mousePosY < 289)) {
                 resolve("picture")
             }
         })
-    }   
+    }
 
     //callers
     drawImage()
