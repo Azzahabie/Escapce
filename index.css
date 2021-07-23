@@ -91,6 +91,7 @@ header {
     padding: 5px;
     margin: 10px 0px 10px 0px;
     width: 100px;
+    
 }
 
 #answerQuestion {
@@ -108,13 +109,56 @@ header {
     padding: 10px;
     font-size: 1em;
     width: max-content;
-    margin: auto;
-    padding-left: 2em;
-    padding-right: 2em;
+    margin: 0 auto;
     margin-bottom: 50px;
+}
+
+#hint-icon {
     background-color: #9B0505;
     border-radius: 20px;
-    color: white;
+    height: 40px;
+    width: 120px;
     font-family: myriad-pro, sans-serif;
     font-style: normal;
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
 }
+
+#found-icon {
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+#barOfHope{
+    margin: auto;
+    width:70%;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+#foundClues{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid rgb(158, 52, 52);
+ }
+#getHelpDiv{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 1px solid rgb(158, 52, 52);
+ }

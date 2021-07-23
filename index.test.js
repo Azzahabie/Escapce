@@ -38,8 +38,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const openModalBtn = document.getElementById("openModal")
 
+    const foundCluesDiv = document.getElementById('foundClues')
+    const foundCluesBtn = document.getElementById("found-icon")
+
+    const getHelpBtn = document.getElementById("hint-icon")
+    const getHelpDiv = document.getElementById('getHelpDiv')
+ 
 
     modal.style.display = "none"
+
+    getHelpBtn.addEventListener('click',()=>{
+        openGetHelp()
+    })
+    foundCluesBtn.addEventListener('click',()=>{
+        openFoundClues()
+    })
 
     closeModalBtn.addEventListener('click', () => {
         closeModal()
@@ -71,7 +84,23 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function createQuestion(data) {
+    function openFoundClues(){
+        if (foundCluesDiv.hidden == true) {
+            foundCluesDiv.hidden = false 
+            
+        } else {
+            foundCluesDiv.hidden = true
+        }
+    }
+    function openGetHelp(){
+        if (getHelpDiv.hidden == true) {
+            getHelpDiv.hidden = false 
+            
+        } else {
+            getHelpDiv.hidden = true
+        }
+    }
+    function createQuestion(data){
         if (data == "cupboard") {
 
         }
@@ -96,7 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (data == "spiderweb") {
             questionImg.src = "./maze.png"
-            labelForQuestion.textContent = "Find your way out of the maze to get the numbers in the array"
+            labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
             questionInput.type = "number"
             questionInput.value = ""
         }
@@ -149,10 +178,10 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "dustbin") {
-
+            // 2,6 
         }
         if (currentQuestion == "glass") {
-
+            // colourful word search
         }
         if (currentQuestion == "crack") {
 
