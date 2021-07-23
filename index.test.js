@@ -6,8 +6,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     var X, Y;
 
-    $(document).ready(function() {
-        $('img').click(function(e) {
+    $(document).ready(function () {
+        $('img').click(function (e) {
             var offset = $(this).offset();
             X = (e.pageX - offset.left);
             Y = (e.pageY - offset.top);
@@ -16,14 +16,14 @@ window.addEventListener('DOMContentLoaded', () => {
             //console.log(X, Y);
 
             pressWhere(X, Y)
-            .then((data) => {
-                openModal(data)
-            })
+                .then((data) => {
+                    openModal(data)
+                })
         });
     });
 
     document.getElementsByTagName('head')[0].appendChild(script);
-    
+
     var currentQuestion;
 
     const roomImg = document.getElementById("img")
@@ -35,9 +35,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const questionInput = document.getElementById('questionInput')
     const labelForQuestion = document.getElementById('labelForQuestionInput')
     const answerQuestionBtn = document.getElementById('answerQuestion')
-    
+
     const openModalBtn = document.getElementById("openModal")
- 
+
 
     modal.style.display = "none"
 
@@ -51,11 +51,11 @@ window.addEventListener('DOMContentLoaded', () => {
     openImgBtn.addEventListener('click', () => {
         openImg()
     })
-    answerQuestionBtn.addEventListener('click',()=>{
+    answerQuestionBtn.addEventListener('click', () => {
         checkAnswer()
     })
 
- 
+
     function closeModal() {
         if (modal.style.display === "none") {
             modal.style.display = "block";
@@ -67,11 +67,11 @@ window.addEventListener('DOMContentLoaded', () => {
         if (roomImg.hidden == false) {
             roomImg.hidden = true;
         } else {
-            roomImg.hidden = false ;
+            roomImg.hidden = false;
         }
     }
 
-    function createQuestion(data){
+    function createQuestion(data) {
         if (data == "cupboard") {
 
         }
@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         if (data == "randomCrack") {
             questionImg.src = "./shapePuzzle1.png"
-            
+
             labelForQuestion.textContent = "Find the option that fits ?"
             questionInput.type = "text"
             questionInput.value = "a b c or d"
@@ -117,14 +117,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
             labelForQuestion.textContent = "i = ?"
             questionInput.type = "number"
-        } 
+        }
         else {
             console.log(data);
             console.log("no load");
         }
     }
 
-    function checkAnswer(){
+    function checkAnswer() {
         if (currentQuestion == "cupboard") {
 
         }
@@ -146,7 +146,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (currentQuestion == "spiderweb") {
             let answer = 7210787123513643157026804309
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer){
+            if (userAnswer == answer) {
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
@@ -161,7 +161,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (currentQuestion == "randomCrack") {
             // let answer = "c" || "C"
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == 'C' || userAnswer == 'c'){
+            if (userAnswer == 'C' || userAnswer == 'c') {
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
@@ -170,7 +170,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (currentQuestion == "randomFloor") {
 
         }
-        if(currentQuestion == "picture") {
+        if (currentQuestion == "picture") {
             let answer = 4;
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
@@ -191,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-   function pressWhere(mousePosX, mousePosY) {
+    function pressWhere(mousePosX, mousePosY) {
         console.log(mousePosX, mousePosY);
         return new Promise(function (resolve, reject) {
             if ((mousePosX > 709 && mousePosX < 871) && (mousePosY > 319 && mousePosY < 591)) {
@@ -200,7 +200,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 resolve("keypad")
             } else if ((mousePosX > 886 && mousePosX < 935) && (mousePosY > 583 && mousePosY < 684)) {
                 resolve("dustbin")
-            } else if((mousePosX > 90 && mousePosX < 148) && (mousePosY > 568 && mousePosY < 690)) {
+            } else if ((mousePosX > 90 && mousePosX < 148) && (mousePosY > 568 && mousePosY < 690)) {
                 resolve("glass")
             } else if ((mousePosX > 210 && mousePosX < 297) && (mousePosY > 466 && mousePosY < 541)) {
                 resolve("crack")
@@ -212,11 +212,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 resolve("lightbulb")
             } else if ((mousePosX > 320 && mousePosX < 464) && (mousePosY > 597 && mousePosY < 690)) {
                 resolve("luggage")
-            } else if((mousePosX > 643 && mousePosX < 751) && (mousePosY > 54 && mousePosY < 153)) {
+            } else if ((mousePosX > 643 && mousePosX < 751) && (mousePosY > 54 && mousePosY < 153)) {
                 resolve("randomCrack")
-            } else if((mousePosX > 532 && mousePosX < 631) && (mousePosY > 608 && mousePosY < 694)) {
+            } else if ((mousePosX > 532 && mousePosX < 631) && (mousePosY > 608 && mousePosY < 694)) {
                 resolve("randomFloor")
-            } else if((mousePosX > 40 && mousePosX < 149) && (mousePosY > 159 && mousePosY < 345)) {
+            } else if ((mousePosX > 40 && mousePosX < 149) && (mousePosY > 159 && mousePosY < 345)) {
                 resolve("picture")
             } else {
                 console.log("huh")

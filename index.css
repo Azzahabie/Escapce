@@ -54,12 +54,14 @@ header {
     height: auto;
     display: flex;
     background-color: gray;
+    opacity: 90%;
     flex-direction: column;
 }
 
 #content-in-modal {
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 .modal-content-2 {
@@ -75,6 +77,8 @@ header {
 
 #labelForQuestionInput {
     font-size: 1.7em;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
 }
 
 #questionImg {
