@@ -1,5 +1,3 @@
-
-
 window.addEventListener('DOMContentLoaded', () => {
 
     //canvas
@@ -79,7 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function pressWhere(mousePosX, mousePosY){
         return new Promise(function(resolve,reject){
             if ((mousePosX > 904 && mousePosX < 1104) && (mousePosY > 141 && mousePosY < 429)) {
-                resolve("cardBoard")
+                resolve("cupboard")
             } else if((mousePosX > 1190 && mousePosX < 1233) && (mousePosY > 348 && mousePosY < 430)) {
                 resolve("keypad")
             } else if((mousePosX > 1129 && mousePosX < 1166) && (mousePosY > 411 && mousePosY < 499)) {
