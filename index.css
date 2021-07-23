@@ -107,10 +107,13 @@ header {
 
 #close-Modal {
     padding: 10px;
-    font-size: 1em;
     width: max-content;
     margin: 0 auto;
     margin-bottom: 50px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    height: 40px;
+    color: white;
 }
 
 #hint-icon {
