@@ -31,12 +31,20 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
     canvas.addEventListener('click', ((event) => {
-        pressWhere(event.clientX,event.clientY)
-        .then((data)=>{
-            console.log(data)
-            openModal(data)
+        // pressWhere(event.clientX,event.clientY)
+        // .then((data)=>{
+        //     console.log(data)
+        //     openModal(data)
+        // })
+        //console.log(event.clientX, event.clientY);
+
+        getProperMousePos(canvas,event)
+        .then(data=>{
+            pressWhere(data.x,data.y)
+            .then(data=>{
+                console.log(data);
+            })
         })
-        console.log(event.clientX, event.clientY);
         
     }))
 
@@ -76,30 +84,41 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function pressWhere(mousePosX, mousePosY){
+    function getProperMousePos(canvas,event){
         return new Promise(function(resolve,reject){
-            if ((mousePosX > 904 && mousePosX < 1104) && (mousePosY > 141 && mousePosY < 429)) {
+            
+            let rect = canvas.getBoundingClientRect();
+            let x = event.clientX - rect.left;
+            let y = event.clientY - rect.top;
+            resolve({x,y})
+        })
+    }
+
+    function pressWhere(mousePosX, mousePosY){
+        console.log(mousePosX,mousePosY);
+        return new Promise(function(resolve,reject){
+            if ((mousePosX > 714 && mousePosX < 864) && (mousePosY > 323 && mousePosY < 589)) {
                 resolve("cardBoard")
-            } else if((mousePosX > 1190 && mousePosX < 1233) && (mousePosY > 348 && mousePosY < 430)) {
+            } else if((mousePosX > 960 && mousePosX < 999) && (mousePosY > 451 && mousePosY < 548)) {
                 resolve("keypad")
-            } else if((mousePosX > 1129 && mousePosX < 1166) && (mousePosY > 411 && mousePosY < 499)) {
+            } else if((mousePosX > 888 && mousePosX < 936) && (mousePosY > 584 && mousePosY < 684)) {
                 resolve("dustbin")
-            } else if((mousePosX > 333 && mousePosX < 392) && (mousePosY > 435 && mousePosY < 559)) {
+            } else if((mousePosX > 116 && mousePosX < 138) && (mousePosY > 564 && mousePosY < 691)) {
                 resolve("glass")
-            } else if((mousePosX > 578 && mousePosX < 720) && (mousePosY > 349 && mousePosY < 413)) {
-                resolve("pillow")
-            } else if((mousePosX > 632 && mousePosX < 695) && (mousePosY > 127 && mousePosY < 199)) {
+            } else if((mousePosX > 224 && mousePosX < 286) && (mousePosY > 469 && mousePosY < 534)) {
+                resolve("crack")
+            } else if((mousePosX > 283 && mousePosX < 572) && (mousePosY > 254 && mousePosY < 386)) {
                 resolve("window")
-            } else if((mousePosX > 1013 && mousePosX < 1104) && (mousePosY > 197 && mousePosY < 235)) {
+            } else if((mousePosX > 780 && mousePosX < 868) && (mousePosY > 144 && mousePosY < 287)) {
                 resolve("spiderweb")
-            } else if((mousePosX > 705 && mousePosX < 728) && (mousePosY > 197 && mousePosY < 235)) {
+            } else if((mousePosX > 449 && mousePosX < 532) && (mousePosY > 60 && mousePosY < 153)) {
                 resolve("lightbulb")
-            } else if((mousePosX > 551 && mousePosX < 693) && (mousePosY > 225 && mousePosY < 319)) {
+            } else if((mousePosX > 329 && mousePosX < 462) && (mousePosY > 607 && mousePosY < 689)) {
                 resolve("luggage")
-            } else if((mousePosX > 470 && mousePosX < 520) && (mousePosY > 320 && mousePosY < 520)) {
-                resolve("floormat")
-            } else if((mousePosX > 272 && mousePosX < 380) && (mousePosY > 99 && mousePosY < 289)) {
+            } else if((mousePosX > 30 && mousePosX < 154) && (mousePosY > 152 && mousePosY < 352)) {
                 resolve("picture")
+            } else {
+                resolve("failed")
             }
         })
     }   
