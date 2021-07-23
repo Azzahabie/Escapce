@@ -102,7 +102,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     function createQuestion(data){
         if (data == "cupboard") {
-
+            alert("Nothing here......")
+            closeModal()
         }
         if (data == "keypad") {
             questionImg.src = ""
@@ -124,7 +125,8 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.type = "test"
         }
         if (data == "crack") {
-
+            alert("Nothing here......")
+            closeModal()
         }
         if (data == "window") {
             questionImg.src = "./crosswordPuzzle.png"
@@ -158,7 +160,8 @@ window.addEventListener('DOMContentLoaded', () => {
             questionInput.value = "a b c or d"
         }
         if (data == "randomFloor") {
-
+            alert("Nothing here......")
+            closeModal()
         }
         if (data == "picture") {
             questionImg.src = ""
