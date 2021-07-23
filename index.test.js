@@ -91,7 +91,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (data == "spiderweb") {
-
+            questionImg.src = "./maze.png"
+            labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
+            questionInput.type = "number"
+            questionInput.value = 0234
         }
         if (data == "lightbulb") {
 
@@ -102,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "randomCrack") {
             questionImg.src = "./shapePuzzle1.png"
             
-            labelForQuestion.textContent = "Find the order"
+            labelForQuestion.textContent = "Find the option that fits ?"
             questionInput.type = "text"
             questionInput.value = "a b c or d"
         }
@@ -110,10 +113,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (data == "picture") {
-            questionImg.src = "./maze.png"
-            labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
+            questionImg.src = ""
+
+            labelForQuestion.textContent = "i = ?"
             questionInput.type = "number"
-            questionInput.value = 0234
         } 
         else {
             console.log(data);
@@ -141,7 +144,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "spiderweb") {
-
+            let answer = 7210787123513643157026804309
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer){
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
         }
         if (currentQuestion == "lightbulb") {
 
@@ -150,9 +159,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "randomCrack") {
-            let answer = "c" || "C"
+            // let answer = "c" || "C"
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer){
+            if (userAnswer == 'C' || userAnswer == 'c'){
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
@@ -162,9 +171,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if(currentQuestion == "picture") {
-            let answer = 7210787123513643157026804309
+            let answer = 4;
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer){
+            if (userAnswer == answer) {
                 return window.alert("correct!")
             } else {
                 return window.alert("oops try again")
