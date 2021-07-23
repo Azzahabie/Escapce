@@ -17,11 +17,11 @@
     </header> -->
     <div>
         <div id="canvas-div">
-            <img src="./theImage.png" id="img">
+            <img hidden src="./theImage.png" id="img">
         </div>
 
         <button id="openModal">OPEN ME</button>
-        <button id="openCanvas">Open Canvas</button>
+        <button id="openImg">Open Canvas</button>
 
         <div style="height: 200px;">
         </div>
@@ -29,12 +29,21 @@
         <div class="modal" id="modal">
             <div class="modal-content">
                 <div id="content-in-modal">
-                    <h2 id="modal-h2"></h2>
-                    <button id="close-Modal">close modal</button>
+                    <img id="questionImg">
+                    <div class="modal-content-2">
+                        <div>
+                            <label for="questionInput" id="labelForQuestionInput"></label>
+                        </div>
+                        <input type="text" id="questionInput">
+                        <button id="answerQuestion">Answer</button>
+                    </div>
+                    
                 </div>
+                <button id="close-Modal">Quit Question</button>
             </div>
         </div>
 
     </div>
 </body>
+
 </html>

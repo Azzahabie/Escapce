@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
             Y = (e.pageY - offset.top);
             $('#coord').text('X: ' + X + ', Y: ' + Y);
 
-            console.log(X, Y);
+            //console.log(X, Y);
 
             pressWhere(X, Y)
             .then((data) => {
@@ -23,11 +23,39 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementsByTagName('head')[0].appendChild(script);
+    
+    var currentQuestion;
 
-
+    const roomImg = document.getElementById("img")
+    const openImgBtn = document.getElementById("openImg")
     const closeModalBtn = document.getElementById("close-Modal");
     const modal = document.getElementById("modal")
 
+    const questionImg = document.getElementById('questionImg')
+    const questionInput = document.getElementById('questionInput')
+    const labelForQuestion = document.getElementById('labelForQuestionInput')
+    const answerQuestionBtn = document.getElementById('answerQuestion')
+    
+    const openModalBtn = document.getElementById("openModal")
+ 
+
+    modal.style.display = "none"
+
+    closeModalBtn.addEventListener('click', () => {
+        closeModal()
+    })
+
+    openModalBtn.addEventListener('click', () => {
+        openModal('hi')
+    })
+    openImgBtn.addEventListener('click', () => {
+        openImg()
+    })
+    answerQuestionBtn.addEventListener('click',()=>{
+        checkAnswer()
+    })
+
+ 
     function closeModal() {
         if (modal.style.display === "none") {
             modal.style.display = "block";
@@ -35,31 +63,51 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
+    function openImg() {
+        if (roomImg.hidden == false) {
+            roomImg.hidden = true;
+        } else {
+            roomImg.hidden = false ;
+        }
+    }
 
-    closeModalBtn.addEventListener('click', () => {
-        closeModal()
-    })
+    function createQuestion(data){
+        if (data == "picture") {
+            questionImg.src = "./maze.png"
+            labelForQuestion.textContent = "Fill up this empty array[ ] (just put number no spaces)"
+            questionInput.type = "number"
+            questionInput.value = 0234
+            
+            
+        } else {
+            console.log("no load");
+        }
+    }
 
-    const openModalBtn = document.getElementById("openModal")
+    function checkAnswer(){
 
-    openModalBtn.addEventListener('click', () => {
-        // alert('opened')
-        openModal('hi')
-    })
-
-    const modalContent = document.getElementById("modal-h2")
-
+        if(currentQuestion == "picture"){
+            let answer = 7210787123513643157026804309
+            let userAnswer = document.getElementById("questionInput").value
+            if (userAnswer == answer){
+                return window.alert("correct!")
+            } else {
+                return window.alert("oops try again")
+            }
+        }
+    }    
     function openModal(modal2) {
+        currentQuestion = modal2
+        createQuestion(modal2)
         if (modal.style.display === "none") {
             modal.style.display = "block";
         } else {
             modal.style.display = "none";
         }
-        modalContent.textContent = modal2
     }
 
    function pressWhere(mousePosX, mousePosY) {
-        console.log(mousePosX, mousePosY);
+        //console.log(mousePosX, mousePosY);
         return new Promise(function (resolve, reject) {
             if ((mousePosX > 709 && mousePosX < 871) && (mousePosY > 319 && mousePosY < 591)) {
                 resolve("cupboard")
