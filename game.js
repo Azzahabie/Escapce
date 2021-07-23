@@ -116,9 +116,8 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "dustbin") {
             questionImg.src = ""
 
-            labelForQuestion.textContent = "You found a piece of paper with number 2 and number 6, it might come in handy later."
-            questionInput.type = ""
-            questionInput.value = ""
+            alert("You found a piece of paper with number 2 and number 6, it might come in handy later.")
+            closeModal()
         }
         if (data == "glass") {
             questionImg.src = "./wordsearch.png"
