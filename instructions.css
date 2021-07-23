@@ -16,7 +16,7 @@ body {
     font-family: myriad-pro, sans-serif;
 }
 
-#objective-goal {
+#objective {
     font-size: 30px;
     color: #9B0505;
 }
@@ -27,6 +27,9 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    /* float: left;
+    margin-left: 30em;
+    margin-right: 10em; */
 }
 
 #hint-icon {
@@ -58,11 +61,6 @@ body {
 }
 
 #content {
-    flex-direction: row;
-}
-
-#buttons {
-    display: flex;
     flex-direction: row;
 }
 
