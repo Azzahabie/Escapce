@@ -90,14 +90,27 @@ header {
 }
 
 #answerQuestion {
-    font-size: 1.3em;
-    width: 80px;
+    /* font-size: 1.3em; */
+    width: 90px;
+    height: 40px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
+    color: white;
 }
 
 #close-Modal {
     padding: 10px;
     font-size: 1em;
     width: max-content;
-    margin: 0 auto;
+    margin: auto;
+    padding-left: 2em;
+    padding-right: 2em;
     margin-bottom: 50px;
+    background-color: #9B0505;
+    border-radius: 20px;
+    color: white;
+    font-family: myriad-pro, sans-serif;
+    font-style: normal;
 }
