@@ -221,8 +221,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.glass)
-                // window.location.href = 'game.html'
                 closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -234,7 +234,10 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.window)
+                closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -245,7 +248,10 @@ window.addEventListener('DOMContentLoaded', () => {
             if (userAnswer == answer) {
                 updateClues(currentQuestion)
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.spiderweb)
+                closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -255,7 +261,10 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.lightbulb)
+                closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -264,7 +273,10 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'i+=3' || userAnswer == 'i += 3' || userAnswer == 'i + = 3') {
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.luggage)
+                closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -273,7 +285,10 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'C' || userAnswer == 'c') {
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.randomCrack)
+                closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
@@ -286,7 +301,10 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer) {
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.picture)
+                closeModal();
+                // window.location.href = 'game.html'
             } else {
                 return window.alert("oops try again")
             }
