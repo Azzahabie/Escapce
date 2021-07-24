@@ -215,7 +215,7 @@ window.addEventListener('DOMContentLoaded', () => {
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == answer[currentQuestion]) {
                 window.alert("You have successfully exited the room congrats!")
-                window.location.href = 'index.html'
+                window.location.href = '../index.html'
             } else {
                 return window.alert("Oops, wrong password! Try again!")
             }
