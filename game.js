@@ -109,7 +109,10 @@ window.addEventListener('DOMContentLoaded', () => {
         if (data == "keypad") {
             questionImg.src = ""
 
-            labelForQuestion.textContent = "Given parts of the for loop: 1) var sum = ' '; 2) sum += 3) Enter the password to exit: "
+            labelForQuestion.textContent = `Given parts of the for loop: 
+                <br>1) var sum = ' '; 
+                <br>2) sum += 
+                <br>3) Enter the password to exit: `
             questionInput.type = "number"
             questionInput.value = ""
         }
@@ -176,6 +179,22 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const progress = {
+        glass: false,
+        window: false,
+        spiderweb: false,
+        lightbulb: false,
+        luggage: false,
+        randomCrack: false,
+        picture: false,
+    }
+
+    function trackProgress(data) {
+        if (progress[data] === false) {
+            return progress[data] = true;
+        }
+    }
+
     function checkAnswer() {
         if (currentQuestion == "cupboard") {
 
@@ -200,7 +219,10 @@ window.addEventListener('DOMContentLoaded', () => {
             console.log(typeof lowerCapAnswer);
             if (lowerCapAnswer == answer) {
                 window.alert("correct!")
-                window.location.href = 'game.html'
+                trackProgress(currentQuestion);
+                console.log(progress.glass)
+                // window.location.href = 'game.html'
+                closeModal();
             } else {
                 return window.alert("oops try again")
             }
