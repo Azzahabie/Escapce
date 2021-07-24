@@ -122,7 +122,7 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal()
         }
         if (data == "glass") {
-            questionImg.src = "./wordsearch.png"
+            questionImg.src = "../images/wordsearch.png"
             labelForQuestion.textContent = "Find the hidden word"
             questionInput.type = "test"
         }
@@ -131,31 +131,31 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal()
         }
         if (data == "window") {
-            questionImg.src = "./crosswordPuzzle.png"
+            questionImg.src = "../images/crosswordPuzzle.png"
             labelForQuestion.textContent = "Piece together the crossword puzzle and fill in the coloured boxes."
             questionInput.type = "text"
             questionInput.value = ""
         }
         if (data == "spiderweb") {
-            questionImg.src = "./maze.png"
+            questionImg.src = "../images/maze.png"
             labelForQuestion.textContent = "Escape the maze to get the the numbers needed in the for loop array."
             questionInput.type = "number"
             questionInput.value = ""
         }
         if (data == "lightbulb") {
-            questionImg.src = "./morsecode.png"
+            questionImg.src = "../images/morsecode.png"
             labelForQuestion.textContent = "Decode:  ... .-.. .. -.-. . (No Caps)"
             questionInput.type = "text"
             questionInput.value = ""
         }
         if (data == "luggage") {
-            questionImg.src = "./braillepicandqn.png"
+            questionImg.src = "../images/braillepicandqn.png"
             labelForQuestion.textContent = "Decoded Text: "
             questionInput.type = "text"
             questionInput.value = ""
         }
         if (data == "randomCrack") {
-            questionImg.src = "./shapePuzzle1.png"
+            questionImg.src = "../images/shapePuzzle1.png"
 
             labelForQuestion.textContent = "Find the option that fits."
             questionInput.type = "text"
