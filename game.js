@@ -87,7 +87,6 @@ window.addEventListener('DOMContentLoaded', () => {
     function openFoundClues() {
         if (foundCluesDiv.hidden == true) {
             foundCluesDiv.hidden = false
-
         } else {
             foundCluesDiv.hidden = true
         }
@@ -195,6 +194,12 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const answer = {
+        keypad: 5610,
+        glass: 'length',
+
+    }
+
     function checkAnswer() {
         if (currentQuestion == "cupboard") {
 
@@ -231,6 +236,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
+            let answer =
             let userAnswer = document.getElementById("questionInput").value
             if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
                 window.alert("correct!")
