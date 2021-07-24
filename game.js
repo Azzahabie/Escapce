@@ -301,7 +301,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function openModal(modal2) {
         currentQuestion = modal2
-        createQuestion(modal2)
+        if (progress[modal2] === true) {
+            return alert('You have successfully completed this task!')
+        } else {
+            createQuestion(modal2)
+        }
+        
         if (modal.style.display === "none") {
             modal.style.display = "block";
         } else {
