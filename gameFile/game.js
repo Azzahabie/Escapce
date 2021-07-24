@@ -109,9 +109,9 @@ window.addEventListener('DOMContentLoaded', () => {
             questionImg.src = ""
 
             labelForQuestion.textContent = `Given parts of the for loop: 
-                <br>1) var sum = ' '; 
-                <br>2) sum += 
-                <br>3) Enter the password to exit: `
+                \n1) var sum = ' '; 
+                \n2) sum += 
+                \n3) Enter the password to exit: `
             questionInput.type = "number"
             questionInput.value = ""
         }
