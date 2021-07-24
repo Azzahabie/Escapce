@@ -6,8 +6,9 @@ body {
 #intro {
     margin-left: 8em;
     margin-top: 1em;
-    font-size: 20px;
+    font-size: 24px;
     font-family: myriad-pro, sans-serif;
+    font-weight: bold;
 }
 
 #paragraph {
