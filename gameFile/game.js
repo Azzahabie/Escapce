@@ -125,6 +125,7 @@ window.addEventListener('DOMContentLoaded', () => {
             questionImg.src = "../images/wordsearch.png"
             labelForQuestion.textContent = "Find the hidden word"
             questionInput.type = "test"
+            questionInput.value = ""
         }
         if (data == "crack") {
             alert("Nothing here......")
@@ -185,7 +186,7 @@ window.addEventListener('DOMContentLoaded', () => {
         lightbulb: false,
         luggage: false,
         randomCrack: false,
-        picture: false,
+        picture: false
     }
 
     function trackProgress(data) {
@@ -197,7 +198,12 @@ window.addEventListener('DOMContentLoaded', () => {
     const answer = {
         keypad: 5610,
         glass: 'length',
-
+        window: 'sqarr',
+        spiderweb: 7210787123513643157026804309,
+        lightbulb: 'slice',
+        luggage: 'i+=3',
+        randomCrack: 'c',
+        picture: 4
     }
 
     function checkAnswer() {
@@ -205,9 +211,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "keypad") {
-            let answer = 5610;
+            // let answer = 5610;
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer) {
+            if (userAnswer == answer[currentQuestion]) {
                 window.alert("You have successfully exited the room congrats!")
                 window.location.href = 'index.html'
             } else {
@@ -218,11 +224,11 @@ window.addEventListener('DOMContentLoaded', () => {
             // 2,6 
         }
         if (currentQuestion == "glass") {
-            let answer = "length"
+            // let answer = "length"
             let userAnswer = document.getElementById("questionInput").value
             let lowerCapAnswer = userAnswer.toLowerCase()
             console.log(typeof lowerCapAnswer);
-            if (lowerCapAnswer == answer) {
+            if (lowerCapAnswer == answer[currentQuestion]) {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.glass)
@@ -236,9 +242,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "window") {
-            let answer =
+            // let answer = 'sqarr';
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == 'sqarr' || userAnswer == 'sqArr') {
+            let lowerCapAnswer = userAnswer.toLowerCase()
+            if (lowerCapAnswer == answer[currentQuestion]) {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.window)
@@ -249,9 +256,9 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "spiderweb") {
-            let answer = 7210787123513643157026804309
+            // let answer = 7210787123513643157026804309
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer) {
+            if (userAnswer == answer[currentQuestion]) {
                 updateClues(currentQuestion)
                 window.alert("correct!")
                 trackProgress(currentQuestion);
@@ -263,9 +270,10 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "lightbulb") {
-            let answer = 'slice';
+            // let answer = 'slice';
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer) {
+            let lowerCapAnswer = userAnswer.toLowerCase()
+            if (lowerCapAnswer == answer[currentQuestion]) {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.lightbulb)
@@ -276,8 +284,9 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "luggage") {
+            // let answer = 'i+=3';
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == 'i+=3' || userAnswer == 'i += 3' || userAnswer == 'i + = 3') {
+            if (userAnswer == answer[currentQuestion]) {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.luggage)
@@ -288,8 +297,10 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
         if (currentQuestion == "randomCrack") {
+            // let answer = 'c'
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == 'C' || userAnswer == 'c') {
+            let lowerCapAnswer = userAnswer.toLowerCase()
+            if (lowerCapAnswer == answer[currentQuestion]) {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.randomCrack)
@@ -303,9 +314,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
         if (currentQuestion == "picture") {
-            let answer = 4;
+            // let answer = 4;
             let userAnswer = document.getElementById("questionInput").value
-            if (userAnswer == answer) {
+            if (userAnswer == answer[currentQuestion]) {
                 window.alert("correct!")
                 trackProgress(currentQuestion);
                 console.log(progress.picture)
@@ -326,7 +337,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function openModal(modal2) {
         currentQuestion = modal2
         if (progress[modal2] === true) {
-            return alert('You have successfully completed this task!')
+            return alert(`You have successfully completed this task! Clue: ${answer[modal2]}`)
         } else {
             createQuestion(modal2)
         }
