@@ -163,17 +163,26 @@ header {
 }
 
 #foundClues {
-    width: 50%;
+    width: 120px;
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-top: 20px;
+    margin-left: 10px;
     border: 1px solid rgb(158, 52, 52);
 }
 
 #getHelpDiv {
-    width: 50%;
+    width: 120px;
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     margin-top: 20px;
+    margin-left: 10px;
     border: 1px solid rgb(158, 52, 52);
+}
+
+h3 {
+    font-size: 1em;
+    font-family: myriad-pro, sans-serif;
+    font-style: light;
+    color: white;
 }
